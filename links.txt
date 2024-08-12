@@ -1,0 +1,3 @@
+ Course website: https://s3.eu-west-1.amazonaws.com/neueda.conygre.com/Sites/HSBC_China_HSBC_C/site/index.html
+ VM website: https://admin.neueda.com/machines/ap-southeast-1/d7f449f0-4905-11ef-b023-d52d668d6c1a
+Gist: 
