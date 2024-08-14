@@ -12,7 +12,7 @@ part of Second Berkeley Software Dist=ribution in May, 1979 that the
 editor was installed under the name vi (which took users straight into
 ex's visual mode), an=d the name by which it is known today. Some current
 implement=atio_s of vi can trace their source code ancestry to Bill Joy;
-others are completely new, largel_ compatible reim=plementations.
+others are completely new, largel_ compatible xxxxxx yyyy delete me xxxx reim=plementations.
 
 The name vi is der=ived from the shortest unambiguous ab_reviation for
 the command visual in ex; the command in qu=estion switches the line
