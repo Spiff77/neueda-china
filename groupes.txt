@@ -1,0 +1,35 @@
+Group 1: Table 5	
+Jeanette Jian (HTML/CSS: 1, JS: 2, Back-End: 2, SQL: 3, Framework: N)
+Gary J L LI (HTML/CSS: 2, JS: 3, Back-End: 3, SQL: 4, Framework: Y)
+Kaixi Ji (HTML/CSS: 1, JS: 1, Back-End: 0, SQL: 2, Framework: N)
+Tony P Y Gao (HTML/CSS: 0, JS: 0, Back-End: 2, SQL: 3, Framework: N)
+
+Group 2: Table 2
+Robert Xiao (HTML/CSS: 1, JS: 0, Back-End: 0, SQL: 4, Framework: N)
+Hazel Z Q Lin (HTML/CSS: 2, JS: 2, Back-End: 1, SQL: 3, Framework: N)
+Jaylen Shen (HTML/CSS: 2, JS: 1, Back-End: 2, SQL: 2, Framework: Y)
+Oliver Y H Tian (HTML/CSS: 2, JS: 3, Back-End: 4, SQL: 3, Framework: Y)
+
+Group 3: Table 4
+Jamie Liu (HTML/CSS: 1, JS: 1, Back-End: 3, SQL: 2, Framework: N)
+Joseph Qiu (HTML/CSS: 2, JS: 1, Back-End: 2, SQL: 4, Framework: N)
+Chen Kai Chuang (HTML/CSS: 1, JS: 4, Back-End: 1, SQL: 1, Framework: Y)
+Yujia Yang (HTML/CSS: 0, JS: 0, Back-End: 0, SQL: 2, Framework: N)
+
+Group 4: Table 3
+Robben Min (HTML/CSS: 3, JS: 2, Back-End: 1, SQL: 2, Framework: Y)
+Kiki G Z QI (HTML/CSS: 1, JS: 1, Back-End: 3, SQL: 2, Framework: N)
+Cary J N Huang (HTML/CSS: 1, JS: 0, Back-End: 0, SQL: 2, Framework: N)
+Margaret Ma (HTML/CSS: 2, JS: 1, Back-End: 3, SQL: 3, Framework: Y)
+
+Group 5: Table 1
+David Song (HTML/CSS: 1, JS: 2, Back-End: 3, SQL: 3, Framework: Y)
+Zihui Ouyang (HTML/CSS: 1, JS: 1, Back-End: 1, SQL: 1, Framework: N)
+Jack Jin (HTML/CSS: 1, JS: 0, Back-End: 3, SQL: 3, Framework: Y)
+Q Qin (HTML/CSS: 3, JS: 1, Back-End: 4, SQL: 3, Framework: Y)
+
+Group 6: Table 0
+Kaiyi Sun (HTML/CSS: 2, JS: 2, Back-End: 0, SQL: 3, Framework: N)
+Morning J Peng (HTML/CSS: 2, JS: 2, Back-End: 4, SQL: 3, Framework: N)
+Xinyi Zhao (HTML/CSS: 1, JS: 1, Back-End: 3, SQL: 2, Framework: Y)
+Boning Shi (HTML/CSS: 1, JS: 0, Back-End: 0, SQL: 3, Framework: N)
