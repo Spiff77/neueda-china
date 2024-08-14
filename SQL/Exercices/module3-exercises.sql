@@ -9,7 +9,7 @@
 -- Exercise 2
 -- Insert a new employee with the following values:
 -- Employee ID: 'XYZ123', First Name: 'John', Middle Initial: 'D', Last Name: 'Smith',
--- Job ID: 6, Manager ID: 215, Department ID: '9952', Birthdate: '19800101'
+-- Job ID: 6, Manager ID: 215, Job LVL: '9952', Hire date: '19800101'
 
 -- Exercise 3
 -- Insert a new sale with the following values:
