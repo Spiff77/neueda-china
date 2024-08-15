@@ -2,3 +2,6 @@
  VM website: https://admin.neueda.com/machines/ap-southeast-1/d7f449f0-4905-11ef-b023-d52d668d6c1a
  File manipulation: https://raw.githubusercontent.com/qzi/engineering_stack/master/package.json
  mastering VI: https://vim-adventures.com/
+ 
+ TESTS:
+ SQL: https://test.neueda.com/test/HSBCEngineeringSprint1LinuxSQL
