@@ -1,3 +1,4 @@
+
 /*
 let firstName = "Thomas"
 let age = 39
@@ -103,7 +104,6 @@ for(let c in hobbies){
 }
 
 // for each loop (play with content)
-let i = 0
 /*for(let c of hobbies){
     i++;
     if(c === 'hiking'){
@@ -113,6 +113,35 @@ let i = 0
 
     console.log('Continuing the loop ('+(i)+')')
 }
-console.log('Exiting program')*/
+console.log('Exiting program')
+
+leapYears = [];
+for(let year = 1900; year <= 2000; year ++){
+    if(year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+        leapYears.push(year);
+        if(leapYears.length === 5){
+            break;
+        }
+
+    }
+}*/
 
 
+
+function convertToCelsius(fahrenheit){
+    return (fahrenheit - 32) * 5/9
+}
+
+let album = {
+    title: 'Album title',
+    year: 2020,
+    artist: {
+        name: 'Leon',
+    }
+}
+
+let album2 = { ...album, nbOfTracks: 12, year: 2022}
+album.title = 'Something else'
+
+console.log(album)
+console.log(album2)
