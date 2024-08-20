@@ -14,3 +14,5 @@ https://hsbcchinaX.neueda.com:8443/  With X as you VM number
 
  Feedbacks
  https://forms.office.com/Pages/ResponsePage.aspx?id=BySFSOoS5UiWJTopsPXEUm4k7MkN-q1JmZaORZTh7XpUNjAxR002UTNBSjFDSEVJWTAwMFFNTENDNy4u
+
+playlist: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=5b30cee3b4aa46dc&pt=15fc6af12e6eaed12ff224ca1e63e085
