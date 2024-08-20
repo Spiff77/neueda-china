@@ -1,0 +1,18 @@
+{
+  "name": "sample_app",
+  "version": "1.0.0",
+  "description": "My first npm project",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "guangzhou",
+    "coding",
+    "leon"
+  ],
+  "author": "",
+  "license": "ISC"
+}
