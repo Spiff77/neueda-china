@@ -1,4 +1,5 @@
 
+
 /*
 let firstName = "Thomas"
 let age = 39
@@ -79,27 +80,19 @@ team.splice(0,1)
 
 //console.log(team)
 */
-let age = 39
+let age = 39;
 
-
-
-
-
-
-
-
-              //  0         1        2         3           4
-let hobbies = ['music', 'reading', 'hiking', 'movies', 'eating']
-
+//  0         1        2         3           4
+let hobbies = ["music", "reading", "hiking", "movies", "eating"];
 
 // standard for loop
-for(let i=0; i<hobbies.length; i++){
-    // console.log(hobbies[i])
-    // OR console.log(`The hobby with index ${i} is ${hobbies[i]}`)
+for (let i = 0; i < hobbies.length; i++) {
+  // console.log(hobbies[i])
+  // OR console.log(`The hobby with index ${i} is ${hobbies[i]}`)
 }
 
 // for in loop (play with index)
-for(let c in hobbies){
+for (let c in hobbies) {
   //  console.log(`The hobby with index ${c} is ${hobbies[c]}`)
 }
 
@@ -126,22 +119,85 @@ for(let year = 1900; year <= 2000; year ++){
     }
 }*/
 
-
-
-function convertToCelsius(fahrenheit){
-    return (fahrenheit - 32) * 5/9
+function convertToCelsius(fahrenheit) {
+  return ((fahrenheit - 32) * 5) / 9;
 }
 
 let album = {
-    title: 'Album title',
-    year: 2020,
-    artist: {
-        name: 'Leon',
-    }
+  title: "Album title",
+  year: 2020,
+  artist: { name: "Leon" },
+};
+
+let album2 = { ...album, nbOfTracks: 12, year: 2022 };
+album.title = "Something else";
+
+
+
+
+
+
+class Car{
+
+     constructor(initSpeed, speed){
+        this.initSpeed = initSpeed
+        this.speed = (speed !== undefined) ? speed : 0
+        console.log("Hey am a car")
+     }
 }
 
-let album2 = { ...album, nbOfTracks: 12, year: 2022}
-album.title = 'Something else'
+class RaceCar extends Car{
 
-console.log(album)
-console.log(album2)
+    constructor(initSpeed, sponsors, speed){
+        super(initSpeed, speed)
+        this.sponsors = sponsors
+        console.log("Hey am a race car")
+     }
+}
+
+//let raceCar = new RaceCar(100,['redbull (make you fly)'])
+
+
+function displayDouble(value){
+   return console.log(value * 2)
+}
+
+const displayDoubleMoreModern = (value) => console.log(value * 2)
+
+//displayDoubleMoreModern(200)
+let arr = [1,2,3,4,5,6]
+//arr.forEach((v, i,arr) => 
+  //  console.log(`The index of ${v} is ${i} and the double is ${v * 2}`))
+ let filteredArray = arr.filter(v => {
+    return v % 2 === 0 
+ })
+ let filteredArray2 = arr.filter(v => v % 2 === 0)
+//console.log(filteredArray)
+
+['0=2', '1=4', '2=6', '///more here']
+let doubleValues = arr.map((value, index) => {
+    console.log('starting calulation for ' + value)
+    return `${index}=${value * 2}`
+})
+//console.log(doubleValues)
+
+const filterAndDouble = arr
+                        .filter(v => v % 2 === 0)
+                        .map((value, index) => 
+                            `${index}=${value * 2}`
+                        )
+console.log(filterAndDouble)
+
+instructors = [{name: 'Leon', age: 17}, {name: 'Wei Meng', age: 24}]
+
+//const totalAge = instructors.reduce((acc, instructor) => instructor.age + acc, 0)
+const instructorsNames = instructors.reduce((acc, instructor) => 
+    [...acc, instructor.name], 
+[])
+console.log(instructorsNames)
+
+const total = arr.reduce((acc, v) => {
+   // console.log('acc', acc, 'value', v)
+   return v + acc
+}, 0)
+// console.log(total)

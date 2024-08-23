@@ -14,5 +14,9 @@
     "leon"
   ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.4",
+    "prime-number-check": "^1.0.1"
+  }
 }

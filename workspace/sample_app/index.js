@@ -4,6 +4,9 @@ const url = "https://jsonplaceholder.typicode.com/albums"
 
 let albums = []
 
+// Try to do make it work with running the project on
+// https://github.com/Spiff77/gz-users-server/
+
 // without asyn/await (run in parralels)
 function fetchAlbumsNoAsyncAwait(){
     let response = fetch(url)
@@ -14,7 +17,6 @@ function fetchAlbumsNoAsyncAwait(){
     })
 }
 //albums = fetchAlbumsNoAsyncAwait() // it's empty..... it's async :/ :(
-
 
 // with async/await (wait for answer)
 async function fetchAlbums(){

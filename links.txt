@@ -5,6 +5,7 @@
  
  TESTS:
  SQL: https://test.neueda.com/test/HSBCEngineeringSprint1LinuxSQL
+ JAVASCRIPT: https://test.neueda.com/test/HSBCEngineeringGuangzhouJavaScript
  
  Easy retro link
  https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/8a4765a2-2c22-4f36-b4b8-b457d6fbd056
