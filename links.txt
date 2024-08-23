@@ -1,20 +1,16 @@
- Course website: https://s3.eu-west-1.amazonaws.com/neueda.conygre.com/Sites/HSBC_China_HSBC_C/site/index.html
- VM website: https://admin.neueda.com/machines/ap-southeast-1/d7f449f0-4905-11ef-b023-d52d668d6c1a
- File manipulation: https://raw.githubusercontent.com/qzi/engineering_stack/master/package.json
- mastering VI: https://vim-adventures.com/
- 
- TESTS:
- SQL: https://test.neueda.com/test/HSBCEngineeringSprint1LinuxSQL
- JAVASCRIPT: https://test.neueda.com/test/HSBCEngineeringGuangzhouJavaScript
- 
- Easy retro link
- https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/8a4765a2-2c22-4f36-b4b8-b457d6fbd056
+Course website: https://s3.eu-west-1.amazonaws.com/neueda.conygre.com/Sites/HSBC_China_HSBC_C/site/index.html
+VM website: https://admin.neueda.com/machines/ap-southeast-1/d7f449f0-4905-11ef-b023-d52d668d6c1a
+File manipulation: https://raw.githubusercontent.com/qzi/engineering_stack/master/package.json
+mastering VI: https://vim-adventures.com/
 
-On VM:
-https://hsbcchinaX.neueda.com:8443/  With X as you VM number
+TESTS:
+SQL: https://test.neueda.com/test/HSBCEngineeringSprint1LinuxSQL
+JAVASCRIPT: https://test.neueda.com/test/HSBCEngineeringGuangzhouJavaScript
 
- Feedbacks
- https://forms.office.com/Pages/ResponsePage.aspx?id=BySFSOoS5UiWJTopsPXEUm4k7MkN-q1JmZaORZTh7XpUNjAxR002UTNBSjFDSEVJWTAwMFFNTENDNy4u
+Easy retro link
+https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/8a4765a2-2c22-4f36-b4b8-b457d6fbd056
+
+On VM: https://hsbcchinaX.neueda.com:8443/ # With X as you VM number
 
 playlist: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=5b30cee3b4aa46dc&pt=15fc6af12e6eaed12ff224ca1e63e085
 
