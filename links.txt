@@ -20,3 +20,8 @@ Project instruction from github: https://bitbucket.org/neuedamats/portfoliomanag
 Finhub api: https://finnhub.io/docs/api/introduction
 Express with file hierarchy: http://github.com/Spiff77/express-music-backend
 Simple front-end/back-end app: https://github.com/Spiff77/music-app
+
+
+Feedbacks:
+Data:		: https://bit.ly/4cE79OI
+Egineering	: https://bit.ly/4fXvCBr
