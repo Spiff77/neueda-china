@@ -18,3 +18,8 @@ https://hsbcchinaX.neueda.com:8443/  With X as you VM number
 playlist: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=5b30cee3b4aa46dc&pt=15fc6af12e6eaed12ff224ca1e63e085
 
 git express: http://github.com/Spiff77/express-music-backend.git
+
+PROJECT:
+Project instruction from github: https://bitbucket.org/neuedamats/portfoliomanager/src/master/
+Finhub api: https://finnhub.io/docs/api/introduction
+
