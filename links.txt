@@ -21,5 +21,5 @@ playlist: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=5b30cee3b4
 PROJECT:
 Project instruction from github: https://bitbucket.org/neuedamats/portfoliomanager/src/master/
 Finhub api: https://finnhub.io/docs/api/introduction
-Express with file hierarchy: http://github.com/Spiff77/express-music-backend.git
-
+Express with file hierarchy: http://github.com/Spiff77/express-music-backend
+Simple front-end/back-end app: https://github.com/Spiff77/music-app
