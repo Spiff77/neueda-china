@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    <style>
+ /*
+        In a html <header> tag. 
+        We want to center the title of your page (in a <h1> tag)
+        We want a background-color, a text-color for the text
+        We want a border and a radius for the header
+        Bonus point. Search online for how to do a shadow under the header
+    
+ */
+        div{
+            height:300px;
+            font-size: 40px;
+            color: #2F4F4F;
+            background-color: white;
+
+
+            border-radius: 40px 0 40px 0;
+            letter-spacing: 20px;
+
+
+            /*border-width: 2px;
+            border-color: black;
+            border-style: solid;*/
+            border: 2px solid black;
+
+            padding:30px;
+            /* same as
+            padding-left:30px;
+            padding-top:30px;
+            padding-right:30px;
+            padding-bottom:30px; */
+
+            /* same as
+            padding-left:0px;
+            padding-top:30px;
+            padding-right:0px;
+            padding-bottom:30px; */
+            margin:30px 0;
+
+            text-align:center;
+        }
+        p{
+            color: red;
+        }
+        h1{
+            color: pink;
+            text-align: center;
+        }
+        body{
+            width:1200px;
+            margin:0 auto;
+            background-color: darksalmon;
+        }
+        html{
+            font-family: sans-serif;
+            background-color: white;
+        }
+        header{
+            color: green;
+            border-width: 2px;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    TEXT
+</div>
+    <header>
+        <h1>Hello everyone</h1>
+    </header>
+    <p>It's the last weeks</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse maiores reiciendis, iure eligendi quas in exercitationem repellendus doloremque. Nisi provident temporibus assumenda ratione quia aspernatur tempore nostrum, cum adipisci deleniti!</p>
+    <ul>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>
+            <ul>
+                <li>Hello</li>
+                <li>Hello</li>
+                   <li>Hello</li>
+                <li>Hello</li>
+            </ul>
+        </li>
+        <li>Hello</li>
+    </ul>
+    <form>
+
+        <label for="name">Your name</label>
+        <input type="text" id="name" placeholder="Your name">
+
+        <label for="favLetter">Your favorite letter</label>
+        <select id="favLetter">
+            <option value="">A</option>
+            <option value="">B</option>
+            <option value="">C</option>
+        </select>
+
+        <input type="color">
+        <input type="phone">
+
+        <input type="number" min="10000" max="50000" value="25000" step="1000" /> 
+
+        <input type="range" min="1" max="10" value="5" /> 
+        
+        <input type="tel" placeholder="Enter a telephone number" /> 
+        
+        <input type="email" placeholder="Enter an email address" /> 
+        
+        <input type="url" placeholder="Enter a URL" /> 
+        
+        <input type="color" value="red" placeholder="Choose a color" />
+        
+        <input type="search" results="3" autosave="mySearch" placeholder="Enter search string" />
+        
+
+    </form>
+
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Color</th>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Color</td>
+        </tr>
+    </table>
+    <nav>
+        <h3>Links</h3>
+        <a href="http://www.bbc.co.uk/">Auntie Beeb</a>
+        <a href="http://www.olsensoft.com">Olsen Software</a>
+        <a href="http://www.swanseacity.net">Swansea City</a>
+      </nav>
+      
+    <button>Click me</button>
+</body>
+</html>
