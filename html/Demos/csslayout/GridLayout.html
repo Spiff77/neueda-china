@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Grid Layout</title>
+
+    <style>
+
+    body {
+        font-family: arial;
+    }
+    
+    nav a:link {
+        color: Navy;
+        display: block;
+        text-decoration: none;
+        margin: 2px;
+    }
+
+    nav a:hover {
+        color: Orange;
+        background-color: White;
+    }
+
+    section * {
+        padding: 5px;
+    }
+        
+    /* Set up a grid layout for a section, 3 rows x 3 columns. */
+    #mySection {
+        display: -ms-grid;
+        -ms-grid-rows: 50px 400px 50px;
+        -ms-grid-columns: 150px 450px 150px;
+    }
+    
+    /* The header occupies row 1, and spans all 3 columns. */
+    #mySection header {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        background-color: darkblue;
+        color: white;
+        font-size: 30pt;
+    }
+    
+    /* The navigation menu occupies row 2, column 1. */
+    #mySection nav {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        background-color: yellow;
+    }
+    
+    /* The main content occupies row 2, column 2. */
+    #mySection article {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+        -ms-grid-row-align: center;
+        -ms-grid-column-align: center;
+    }
+    
+    /* The aside occupies row 2, column 3. */
+    #mySection aside {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+        background-color: lightblue;
+    }
+    
+    /* The footer occupies row 3, and spans all 3 columns. */
+    #mySection footer {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        background-color: darkblue;
+        color: white;
+        font-size: 30pt;
+    }
+    
+    </style>
+</head>
+<body>
+<section id="mySection">
+    <header>This is my full-width header</header>
+    <nav>
+        <a href="http://www.bbc.co.uk">Auntie Beeb</a>
+        <a href="http://www.olsensoft.com">Olsen Software</a>
+        <a href="http://www.swanseacity.net">Swansea City</a>
+    </nav>
+    <article>
+        This is the main content area, add all your main content here! It's centrally aligned - do you like it?
+    </article>
+    <aside>
+        This is an aside with incidental information - adverts, etc.
+    </aside>
+    <footer>
+        This is my full-width footer
+    </footer>
+</section>
+</body>
+</html>

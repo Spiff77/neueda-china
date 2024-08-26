@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html manifest="countries.appcache">
+<head>
+	<title>Offline and Online Application</title>
+
+	<style>
+		
+		body {
+			font-family: arial;
+		}
+
+		img, select {
+			width: 200px;
+		}
+		
+	</style>
+
+	<script type="text/javascript">
+	
+		var messageAreaElem;
+
+		// Handles selection changes on the combo box.
+		function displayImage(countryValue) {
+			messageAreaElem.innerHTML = "[selected " + countryValue + "]";
+			var imgElem = document.getElementById("theImage");
+			imgElem.src = countryValue;
+		}
+		
+		// Performs page initialization.
+		function onLoad() {
+		
+			messageAreaElem = document.getElementById("messageArea");
+			displayImage("Default.png");
+
+			// You can handle the online event if you want to.
+			//   window.ononline = function() {
+			//	     messageAreaElem.innerHTML = "[going online at " + new Date().toTimeString() + "]";
+			//   };
+			
+			// You can handle the offline event if you want to.
+			//   window.onoffline = function() {
+			//	     messageAreaElem.innerHTML = "[going offline at " + new Date().toTimeString() + "]";
+			//   };
+		}	
+		
+		window.addEventListener("load", onLoad, true);
+
+	</script>
+
+</head>
+<body>
+
+	<div>
+		<header>
+			<h1>Offline and online application <span id="messageArea"></span></h1>
+		</header>
+		
+		<img id="theImage" width="200" height="150"></img>
+		<br/><br/>
+		
+		<select onchange="displayImage(this.value)">
+			<option value="Default.png" selected>--- Please select a country ---</option>
+			<option value="Brazil.png">Brazil</option>
+			<option value="China.png">China</option>
+			<option value="Greece.png">Greece</option>
+			<option value="Norway.png">Norway</option>
+			<option value="Spain.png">Spain</option>
+			<option value="USA.png">USA</option>
+			<option value="Wales.png">Wales</option>
+		</select>
+
+	</div>
+
+</body>
+</html>

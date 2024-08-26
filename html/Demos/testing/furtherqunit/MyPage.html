@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>QUnit DOM manipulation</title>
+
+    <link href="MyStyles.css" rel="stylesheet" />
+	<link href="qunit.css" rel="stylesheet">
+
+	<script src="qunit.js"></script>
+
+</head>
+<body id="main">
+
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+
+	<p>
+		<label for="description">First name: </label>
+		<input id="firstName" name="firstName" type="text" />
+	</p>
+
+	<p>
+		<label for="description">Last name: </label>
+		<input id="lastName" name="lastName" type="text" />
+	</p>
+
+	<p>
+		 <input type="submit" id="displayButton" value="Display" />
+	</p>
+
+	<table id="peeps"></table>
+	<div id="mouseCoords"></div>
+	
+    <script src="MyCode.js" type="text/javascript"></script>
+	<script src="MyTests.js" type="text/javascript"></script>
+
+</body>
+</html>

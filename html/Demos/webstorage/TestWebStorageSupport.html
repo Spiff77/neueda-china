@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Storage Test</title>
+
+    <script>
+
+        function onLoad() {
+            var localStorageMessageArea = document.getElementById("localStorageMessageArea");
+            var sessionStorageMessageArea = document.getElementById("sessionStorageMessageArea");
+
+            if (window.localStorage) {
+                localStorageMessageArea.innerHTML = "Browser DOES support localStorage";
+            } 
+            else {
+                localStorageMessageArea.innerHTML = "Browser DOES NOT support localStorage";
+            }
+
+            if (window.sessionStorage) {
+                sessionStorageMessageArea.innerHTML = "Browser DOES support sessionStorage";
+            } 
+            else {
+                sessionStorageMessageArea.innerHTML = "Browser DOES NOT support sessionStorage";
+            }
+        }
+
+        window.addEventListener("load", onLoad, true);
+
+    </script>
+</head>
+
+<body>
+    <h1>Web Storage Test</h1>
+    <div id="localStorageMessageArea">Local storage?</div>
+    <div id="sessionStorageMessageArea">Session storage?</div>
+</body>
+</html>

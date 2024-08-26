@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Fun with SVG!</title>
+
+    <style>
+        body {
+            font-family: arial, verdana;
+            font-size: 12px;
+        }
+
+        svg {
+            display: block;
+            border: 2px solid darkblue;
+        }
+
+        /* TODO 3a: Whenever you hover over any element inside an <svg> element, set its fill-opacity to 1.0 */
+
+
+
+    </style>
+
+    <script src="jquery-1.10.2.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        // Global variables, for convenience.
+        var svgNS = "http://www.w3.org/2000/svg";   // Namespace for all SVG elements.
+        var svgPanelWidth, svgPanelHeight;          // Width and height of the <svg> element.
+
+
+        // Initialization - initialize global variables, and set up mouse event handlers.
+        function init() {
+
+            // Get the width and height of the <svg> element (the id of the <svg> element is svgPanel).
+            svgPanelWidth  = $("#svgPanel").attr("width");
+            svgPanelHeight = $("#svgPanel").attr("height");
+
+            // TODO 3b: Handle the mouseup event for any elements inside an <svg> element.
+            //  - If the SHIFT and CTRL keys are depressed, delete the current shape. 
+            //  - Otherwise, toggle the stroke and stroke-width attributes.
+
+
+
+        }
+
+
+        // Add a <rect> element to the <svg> element, with random location, fill colour, and opacity.
+        function addRect() {
+
+            // TODO 1a: Create a new <rect> element, with the correct SVG namespace.
+
+
+            // TODO 1b: Set the x, y, width, height, fill, and fill-opacity attributes on the <rect> element.
+            var attrs = getRandomAttributes();
+
+
+            // TODO 1c: Append the <rect> element as a child of the <svg> element.
+
+
+        }
+
+
+        // Add a <circle> element to the <svg> element, with random centre-point, radius, fill colour, and opacity.
+        function addCircle() {
+
+            // TODO 2a: Create a new <circle> element, with the correct SVG namespace.
+
+
+            // TODO 2b: Set the cx, cy, r, fill, and fill-opacity attributes on the <circle> element.
+            var attrs = getRandomAttributes();
+
+
+            // TODO 2c: Append the <circle> element as a child of the <svg> element.
+
+
+        }
+
+
+        // Double the width and height of all the <rect> elements. 
+        function growRects() {
+            
+            // TODO 4a: For all <rect> elements, get the width and height attributes, double them, and then set them again.
+
+
+        }
+
+
+        // Halve the width and height of all the <rect> elements. 
+        function shrinkRects() {
+
+            // TODO 4b: For all <rect> elements, get the width and height attributes, halve them, and then set them again.
+
+
+        }
+
+
+        // Scale-up all elements inside the <svg> element, by wrapping each element in a <g transform='scale(2.0)'> element.
+        function scaleUpAll() {
+
+            // TODO 5a: For all children of <svg> (except existing <g> elements), wrap in a <g transform='scale(2.0)'> element.
+
+
+        }
+
+
+        // Scale-down all elements inside the <svg> element, by wrapping each element in a <g transform='scale(0.5)'> element.
+        function scaleDownAll() {
+
+            // TODO 5b: For all children of <svg> (except existing <g> elements), wrap in a <g transform='scale(0.5)'> element.
+
+
+        }
+
+
+        // Add a <polygon> element to the <svg> element, with random points, fill colour, and opacity.
+        function addPolygon() {
+
+            // TODO 6a: Create a new <polygon> element, with the correct SVG namespace.
+
+
+            // TODO 6b: Choose a random number of points (e.g. between 3 and 10), and calculate the angle delta for each point.
+
+
+            // TODO 6c: Create a string that represents all the points in the polygon, centred on an x, y point.
+
+
+            // TODO 6d: Set the points, fill, and fill-opacity attributes on the <polygon> element.
+
+
+            // TODO 6e: Append the <polygon> element as a child of the <svg> element.
+
+
+        }
+
+
+        // Helper function, returns an object with random properties representing location, colour, and opacity.
+        function getRandomAttributes() {
+            return {
+                x: getRandomInt(0, svgPanelWidth / 2),   // Random x coordinate.
+                y: getRandomInt(0, svgPanelHeight / 2),  // Random y coordinate. 
+                w: getRandomInt(50, svgPanelWidth / 2),  // Random width.
+                h: getRandomInt(50, svgPanelHeight / 2), // Random height.
+                r: getRandomInt(0, 255),                 // Random redness.
+                g: getRandomInt(0, 255),                 // Random greenness.
+                b: getRandomInt(0, 255),                 // Random blueness.
+                o: Math.random()                         // Random opacity.
+            };
+        }
+
+
+        // Another helper function, returns a single random number in the range (min, max).
+        function getRandomInt(min, max) {
+            return min + Math.floor(Math.random() * (max - min + 1));
+        }
+
+    </script>
+
+</head>
+
+<body onload="init()">
+
+    <h1>Fun with SVG!</h1>
+  
+    <svg xmlns="http://www.w3.org/2000/svg" id="svgPanel" width="900" height="500"></svg>
+
+    <button onclick="addRect()">Add Rectangle</button>
+    <button onclick="addCircle()">Add Circle</button> 
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button onclick="growRects()">Grow Rectangles</button>
+    <button onclick="shrinkRects()">Shrink Rectangles</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <button onclick="scaleUpAll()">Scale Up All</button>
+    <button onclick="scaleDownAll()">Scale Down All</button>
+
+    <button onclick="addPolygon()">Add Polygon</button> 
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+</body>
+</html>

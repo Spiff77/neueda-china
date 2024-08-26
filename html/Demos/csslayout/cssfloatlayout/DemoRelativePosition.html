@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Relative positioning</title>
+
+		<style>
+
+			p.shiftLeft {
+				position: relative;
+				left: -100px;
+			}
+
+			p.shiftRightAndUp {
+				position: relative;
+				left: 100px;
+				top: -100px;
+				z-index: -1;
+			}
+
+		
+		</style>
+		
+	</head>
+
+	<body>
+
+		<p style="background-color: red" class="shiftLeft">
+			This is the main content in the document.<br/>
+			It contains some text.<br/>
+			And some more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>		
+		</p>
+		
+		<p style="background-color: yellow">
+			This is another div in the document.<br/>
+			It contains some text.<br/>
+			And some more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+		</p>
+	
+		<p style="background-color: blue" class="shiftRightAndUp">
+			This is the last div in the document.<br/>
+			It contains some text.<br/>
+			And some more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>
+			And yet more text.<br/>		
+		</p>
+
+	</body>
+</html>

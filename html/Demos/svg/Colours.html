@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Working with colors</title>
+	<style>
+
+		body {
+			font-family: arial, verdana;
+			font-size: 12px;
+		}
+
+		button {
+			background-color: yellow;
+			color: orange;
+			width: 150px;
+			height: 30px;
+			margin: 0px 10px 5px 0px;
+		}
+
+		svg {
+			display: none;
+			border: 2px solid darkblue;
+			background-color: rgba(0, 255, 0, 0.25);
+			width: 600px;
+			height: 350px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Working with colors</h1>
+
+	<p>Click a button to draw colored shape</p>
+
+	<button onclick="draw('fillAndStroke')">Fill and stroke</button>
+	<button onclick="draw('gradientsAndPatterns')">Gradients and patterns</button>
+	<br/>
+
+	<!-- Demonstrate fill and stroke techniques-->
+	<svg xmlns="http://www.w3.org/2000/svg" id="fillAndStroke" >
+	
+		<!-- Black interior, no outline -->
+		<rect x="10" y="10" width="50" height="50" />
+
+	   <!-- No interior, light blue outline -->
+	   <rect x="70" y="10" width="50" height="50"
+		     fill="none"
+			 stroke="lightblue"/>
+
+	   <!-- Yellow interior, thick semi-transparent purple outline -->
+	   <rect x="10" y="70" width="50" height="50"
+		     fill="yellow"
+			 stroke="purple" stroke-width="5" stroke-opacity="0.5" />
+
+	   <!-- Semi-transparent yellow interior, dashed purple outline -->
+	   <rect x="70" y="70" width="50" height="50"
+		     fill="yellow" fill-opacity="0.5"
+			 stroke="purple" stroke-width="2" stroke-dasharray="2 2" />
+	</svg>
+
+	
+	<!-- Demonstrate gradients -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="gradientsAndPatterns">
+	
+		<!-- Define some gradients, for use later -->
+		<defs>
+			<!-- You can specify gradients using fractions or percentages of target object itself -->
+			<linearGradient id="gradient1a" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="objectBoundingBox">  
+				<stop offset="0.2" stop-color="yellow" />
+				<stop offset="0.5" stop-color="green" />
+				<stop offset="1.0" stop-color="red" />
+			</linearGradient>
+
+			<!-- You can also specify gradients using the overall coordinate system -->
+			<linearGradient id="gradient1b" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+				<stop offset="0.2" stop-color="yellow" />
+				<stop offset="0.5" stop-color="green" />
+				<stop offset="1.0" stop-color="red" />
+			</linearGradient>
+
+			<radialGradient id="gradient2" fx="0.3" fy="0.3" gradientUnits="objectBoundingBox">
+				<stop offset="0.1" stop-color="yellow"  />
+				<stop offset="0.7" stop-color="red" />
+			</radialGradient>
+			
+			<pattern id="wales" patternUnits="userSpaceOnUse" width="100" height="100"> 
+				<image xlink:href="wales.png" x="0" y="0" width="100" height="100" />
+			</pattern> 
+			
+		</defs>
+  
+		<!-- Draw left-hand side shapes -->
+		<polygon points="50,50 250,50 150,200" fill="url(#gradient1a)" />
+		<ellipse cx="150" cy="50" rx="100" ry="20" fill="url(#wales)" />
+		<circle cx="150" cy="250" r="50" fill="url(#gradient2)" />
+
+		<!-- Draw right-hand side shapes -->
+		<polygon points="350,50 550,50 450,200" fill="url(#gradient1a)" />
+		<ellipse cx="450" cy="50" rx="100" ry="20" fill="url(#wales)" />
+		<circle cx="450" cy="250" r="50" fill="url(#gradient2)" />
+
+	</svg>
+
+	<script>
+		function draw(id) {
+
+			// Hide all the svg elements.
+			var elems = document.querySelectorAll("svg");
+			for (var i = 0; i < elems.length; i++) {
+				elems[i].style.display = "none";
+			}
+			
+			// Show this svg element.
+			var thisElem = document.querySelector("#" + id);
+			thisElem.style.display = "block";
+		}
+	</script>
+
+</body>
+</html>

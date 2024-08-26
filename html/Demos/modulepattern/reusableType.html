@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Defining Reusable Types with Encapsulation</title>
+
+    <script>
+        var Meals = {};
+        Meals.Restaurant = {};
+
+        Meals.Restaurant.RestaurantDescription = (function() {
+
+            // these bits are private
+            var restaurantID = 1;
+
+            function privateFunctionCalculateOpeningHours() {
+                // do some internal calculations
+            }
+
+            // this is the public interface
+            return {
+                OpeningHours : function () {
+                    this.Opening = null;
+                    this.Closing = null;
+                },
+                RestaurantDetails : function () {
+                    this.Id = null;
+                    this.Name = null;
+                    this.Description = null;
+                    this.Address = null;
+                    this.Postcode = null;
+                    this.Cuisines = null;
+                },
+                toString : function () {
+                    // the private function is accessible from here
+                    privateFunctionCalculateOpeningHours();
+                    return this.RestaurantDetails.Name + " " + " is a " + this.RestaurantDetails.Cuisines + " restaurant."
+                }
+            }
+        });
+
+        // initialise the values
+        // values would normally come from a REST API call or perhaps from a Web form
+        var restaurant = new Meals.Restaurant.RestaurantDescription();
+        restaurant.OpeningHours.Opening = "17:00";
+        restaurant.OpeningHours.Closing = "22:00";
+        restaurant.RestaurantDetails.Id = 1;
+        restaurant.RestaurantDetails.Name = "Thai Garden";
+        restaurant.RestaurantDetails.Description = "Fantastic Thai Food";
+        restaurant.RestaurantDetails.Address = "Bristol";
+        restaurant.RestaurantDetails.Postcode = "BS1";
+        restaurant.RestaurantDetails.Cuisines = "Thai";
+
+        // inaccessible from here - encapsulated private function
+        //restaurant.privateFunctionCalculateOpeningHours();
+
+        alert(restaurant.OpeningHours.Opening);
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

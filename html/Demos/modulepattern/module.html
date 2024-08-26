@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Module Pattern</title>
+
+    <script>
+        // create a basic Module first
+        // This is an immediately executing anonymous function or IEAF
+        // Note the two brackets at the end, this causes the function to run straight away
+          var Module = (function () {
+              // code
+          })();
+
+
+
+        // we can then add a private method to it as well
+        var Module2 = (function () {
+
+            var privateMethod = function () {
+                // do something
+            };
+
+        })();
+
+
+        // normally an object is returned
+        // the public methods here would have access to the private methods and fields
+        var Module3 = (function () {
+
+            var privateMethod = function () {};
+
+            return {
+                publicMethodOne: function () {
+                    // I can call `privateMethod()` you know...
+                },
+                publicMethodTwo: function () {
+
+                },
+                publicMethodThree: function () {
+
+                }
+            };
+
+        })();
+
+
+        // a variation with a locally scoped object that is created
+        // to be returned
+        var Module4 = (function () {
+
+            // locally scoped Object
+            var myObject = {};
+
+            // declared with `var`, must be "private"
+            var privateMethod = function () {};
+
+            myObject.someMethod = function () {
+                // take it away Mr. Public Method
+            };
+
+            return myObject;
+
+        })();
+
+
+        // this variant is the revealing module pattern
+        // it is called this because some of the methods
+        // are revealed in the return value (public)
+        // and others are not so remain private
+        var Module5 = (function () {
+
+            var privateMethod = function () {
+                // private
+            };
+
+            var someMethod = function () {
+                // public
+            };
+
+            var anotherMethod = function () {
+                // public
+            };
+
+            return {
+                someMethod: someMethod,
+                anotherMethod: anotherMethod
+            };
+
+        })();
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

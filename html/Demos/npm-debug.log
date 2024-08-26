@@ -1,0 +1,191 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'scss',
+1 verbose cli   '-g' ]
+2 info using npm@1.3.14
+3 info using node@v0.10.22
+4 verbose cache add [ 'scss', null ]
+5 verbose cache add name=undefined spec="scss" args=["scss",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'scss',
+6 verbose parsed url   path: 'scss',
+6 verbose parsed url   href: 'scss' }
+7 silly lockFile 02d10287-scss scss
+8 verbose lock scss /Users/nicktodd/.npm/02d10287-scss.lock
+9 silly lockFile 02d10287-scss scss
+10 silly lockFile 02d10287-scss scss
+11 verbose addNamed [ 'scss', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 3dec410b-scss scss@
+14 verbose lock scss@ /Users/nicktodd/.npm/3dec410b-scss.lock
+15 silly addNameRange { name: 'scss', range: '*', hasData: false }
+16 verbose url raw scss
+17 verbose url resolving [ 'https://registry.npmjs.org/', './scss' ]
+18 verbose url resolved https://registry.npmjs.org/scss
+19 info trying registry request attempt 1 at 10:21:50
+20 verbose etag "8C5WS6YL4N8DETA7GO7LY6OBW"
+21 http GET https://registry.npmjs.org/scss
+22 http 304 https://registry.npmjs.org/scss
+23 silly registry.get cb [ 304,
+23 silly registry.get   { date: 'Wed, 20 Apr 2016 09:21:51 GMT',
+23 silly registry.get     via: '1.1 varnish',
+23 silly registry.get     'cache-control': 'max-age=300',
+23 silly registry.get     etag: '"8C5WS6YL4N8DETA7GO7LY6OBW"',
+23 silly registry.get     age: '70',
+23 silly registry.get     connection: 'keep-alive',
+23 silly registry.get     'x-served-by': 'cache-fra1225-FRA',
+23 silly registry.get     'x-cache': 'HIT',
+23 silly registry.get     'x-cache-hits': '1',
+23 silly registry.get     'x-timer': 'S1461144111.066537,VS0,VE0',
+23 silly registry.get     vary: 'Accept-Encoding' } ]
+24 verbose etag scss from cache
+25 silly addNameRange number 2 { name: 'scss', range: '*', hasData: true }
+26 silly addNameRange versions [ 'scss',
+26 silly addNameRange   [ '0.1.0', '0.1.1', '0.2.0', '0.2.2', '0.2.3', '0.2.4' ] ]
+27 verbose addNamed [ 'scss', '0.2.4' ]
+28 verbose addNamed [ '0.2.4', '0.2.4' ]
+29 silly lockFile b93db9ac-scss-0-2-4 scss@0.2.4
+30 verbose lock scss@0.2.4 /Users/nicktodd/.npm/b93db9ac-scss-0-2-4.lock
+31 silly lockFile 9d05ca01-ry-npmjs-org-scss-scss-0-2-4-tgz https://registry.npmjs.org/scss/-/scss-0.2.4.tgz
+32 verbose lock https://registry.npmjs.org/scss/-/scss-0.2.4.tgz /Users/nicktodd/.npm/9d05ca01-ry-npmjs-org-scss-scss-0-2-4-tgz.lock
+33 verbose addRemoteTarball [ 'https://registry.npmjs.org/scss/-/scss-0.2.4.tgz',
+33 verbose addRemoteTarball   '040d903ed37c5d4fa4ad33ae1fd389ac12a4e065' ]
+34 info retry fetch attempt 1 at 10:21:51
+35 verbose fetch to= /var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/tmp.tgz
+36 http GET https://registry.npmjs.org/scss/-/scss-0.2.4.tgz
+37 http 200 https://registry.npmjs.org/scss/-/scss-0.2.4.tgz
+38 verbose tar unpack /var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/tmp.tgz
+39 silly lockFile 373bee96-11128-0-5800778267439455-package tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+40 verbose lock tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package /Users/nicktodd/.npm/373bee96-11128-0-5800778267439455-package.lock
+41 silly lockFile 0482eb16-11128-0-5800778267439455-tmp-tgz tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/tmp.tgz
+42 verbose lock tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/tmp.tgz /Users/nicktodd/.npm/0482eb16-11128-0-5800778267439455-tmp-tgz.lock
+43 silly gunzTarPerm modes [ '755', '644' ]
+44 silly gunzTarPerm extractEntry .gitignore
+45 silly gunzTarPerm extractEntry package.json
+46 silly gunzTarPerm extractEntry README.md
+47 silly gunzTarPerm extractEntry examples/blog.scss
+48 silly gunzTarPerm extractEntry examples/compiler_tester.js
+49 silly gunzTarPerm extractEntry examples/grammarInvoker.js
+50 silly gunzTarPerm extractEntry examples/input.scss
+51 silly gunzTarPerm extractEntry examples/tester.js
+52 silly gunzTarPerm extractEntry specs/cssSelectorSpecs.js
+53 silly gunzTarPerm extractEntry specs/grammarInvoker.js
+54 silly gunzTarPerm extractEntry src/compiler.js
+55 silly gunzTarPerm extractEntry src/cssSelector.ometa
+56 silly gunzTarPerm extractEntry src/index.js
+57 silly gunzTarPerm extractEntry src/prettyPrint.js
+58 silly gunzTarPerm extractEntry src/scss.ometa
+59 silly lockFile 373bee96-11128-0-5800778267439455-package tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+60 silly lockFile 373bee96-11128-0-5800778267439455-package tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+61 silly lockFile 0482eb16-11128-0-5800778267439455-tmp-tgz tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/tmp.tgz
+62 silly lockFile 0482eb16-11128-0-5800778267439455-tmp-tgz tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/tmp.tgz
+63 verbose tar pack [ '/Users/nicktodd/.npm/scss/0.2.4/package.tgz',
+63 verbose tar pack   '/var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package' ]
+64 verbose tarball /Users/nicktodd/.npm/scss/0.2.4/package.tgz
+65 verbose folder /var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+66 silly lockFile 373bee96-11128-0-5800778267439455-package tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+67 verbose lock tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package /Users/nicktodd/.npm/373bee96-11128-0-5800778267439455-package.lock
+68 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+69 verbose lock tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz /Users/nicktodd/.npm/ae62d436-ktodd-npm-scss-0-2-4-package-tgz.lock
+70 silly lockFile 373bee96-11128-0-5800778267439455-package tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+71 silly lockFile 373bee96-11128-0-5800778267439455-package tar:///var/folders/bp/xw09zk3n3qz00n57_wxlpfz40000gn/T/npm-78293-YsF2bSLW/1461144111128-0.5800778267439455/package
+72 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+73 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+74 silly lockFile 50d1c30f--nicktodd-npm-scss-0-2-4-package /Users/nicktodd/.npm/scss/0.2.4/package
+75 verbose lock /Users/nicktodd/.npm/scss/0.2.4/package /Users/nicktodd/.npm/50d1c30f--nicktodd-npm-scss-0-2-4-package.lock
+76 silly lockFile 50d1c30f--nicktodd-npm-scss-0-2-4-package /Users/nicktodd/.npm/scss/0.2.4/package
+77 silly lockFile 50d1c30f--nicktodd-npm-scss-0-2-4-package /Users/nicktodd/.npm/scss/0.2.4/package
+78 verbose tar unpack /Users/nicktodd/.npm/scss/0.2.4/package.tgz
+79 silly lockFile 1ba3b138--nicktodd-npm-scss-0-2-4-package tar:///Users/nicktodd/.npm/scss/0.2.4/package
+80 verbose lock tar:///Users/nicktodd/.npm/scss/0.2.4/package /Users/nicktodd/.npm/1ba3b138--nicktodd-npm-scss-0-2-4-package.lock
+81 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+82 verbose lock tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz /Users/nicktodd/.npm/ae62d436-ktodd-npm-scss-0-2-4-package-tgz.lock
+83 silly gunzTarPerm modes [ '755', '644' ]
+84 silly gunzTarPerm extractEntry package.json
+85 silly gunzTarPerm extractEntry .npmignore
+86 silly gunzTarPerm extractEntry README.md
+87 silly gunzTarPerm extractEntry examples/compiler_tester.js
+88 silly gunzTarPerm extractEntry examples/grammarInvoker.js
+89 silly gunzTarPerm extractEntry examples/tester.js
+90 silly gunzTarPerm extractEntry examples/blog.scss
+91 silly gunzTarPerm extractEntry examples/input.scss
+92 silly gunzTarPerm extractEntry specs/cssSelectorSpecs.js
+93 silly gunzTarPerm extractEntry specs/grammarInvoker.js
+94 silly gunzTarPerm extractEntry src/compiler.js
+95 silly gunzTarPerm extractEntry src/index.js
+96 silly gunzTarPerm extractEntry src/prettyPrint.js
+97 silly gunzTarPerm extractEntry src/cssSelector.ometa
+98 silly gunzTarPerm extractEntry src/scss.ometa
+99 silly lockFile 1ba3b138--nicktodd-npm-scss-0-2-4-package tar:///Users/nicktodd/.npm/scss/0.2.4/package
+100 silly lockFile 1ba3b138--nicktodd-npm-scss-0-2-4-package tar:///Users/nicktodd/.npm/scss/0.2.4/package
+101 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+102 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+103 verbose chmod /Users/nicktodd/.npm/scss/0.2.4/package.tgz 644
+104 verbose chown /Users/nicktodd/.npm/scss/0.2.4/package.tgz [ 501, 20 ]
+105 silly lockFile 9d05ca01-ry-npmjs-org-scss-scss-0-2-4-tgz https://registry.npmjs.org/scss/-/scss-0.2.4.tgz
+106 silly lockFile 9d05ca01-ry-npmjs-org-scss-scss-0-2-4-tgz https://registry.npmjs.org/scss/-/scss-0.2.4.tgz
+107 silly lockFile b93db9ac-scss-0-2-4 scss@0.2.4
+108 silly lockFile b93db9ac-scss-0-2-4 scss@0.2.4
+109 silly lockFile 3dec410b-scss scss@
+110 silly lockFile 3dec410b-scss scss@
+111 silly resolved [ { name: 'scss',
+111 silly resolved     description: 'JavaScript Implementation of SCSS (Sassy CSS)',
+111 silly resolved     version: '0.2.4',
+111 silly resolved     contributors: [ [Object] ],
+111 silly resolved     main: './src/index.js',
+111 silly resolved     engines: { node: '>= 0.2.0' },
+111 silly resolved     dependencies: { ometa: '0.2.2' },
+111 silly resolved     readme: '# scss-js\n## A JavaScript implementation of SCSS (Sassy CSS)\n\n## API\n\n### Connect Compiler\n\n    var sys = require(\'sys\'),\n        fs = require(\'fs\'),\n        compiler = require(\'../src/scssCompiler\');\n    \n    fs.readFile(__dirname + \'/blog.scss\', function(err, scssFile) {\n      compiler.compile(scssFile.toString(), function(err, css) {\n        if(err) {\n          sys.puts(sys.inspect(err));\n        } else {\n          sys.puts(css);\n        }\n      });\n    });\n\nThe compile function takes a string and returns another string with the file\'s css.\n\n## Where Does the Project Stand?\n\n### What\'s Usable?\n  * CSS Selectors\n  * Nested Rules\n  * Variables\n  * Fixed Mixins\n\n### What Needs Work?\n  * CSS Selectors\n  * Variable and Mixin names\n\n### What\'s Unimplemented?\n  * Parameterized Mixins\n  * Functions\n\n## Next Release (0.2.0)\n\nFull CSS Selector implementation\n\n\n## Special Thanks\n\nI would like to give special thanks to [Hampton Catlin](http://hamptoncatlin.com),\n[Nathan Weizenbaum](http://nex-3.com), and [Chris Eppstein](http://acts-as-architect.blogspot.com)\nfor starting and continuing the haml and sass project. I\'d also like to thank the rest of the people\nthat have contributed to [Sass](http://sass-lang.com/) and I hope I can catch up to your\nawesomeness.\n\n## Modified MIT License\n\nCopyright (c) 2010 Brian Mavity \n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nExcept as contained in this notice, the name(s) of the above copyright\nholders shall not be used in advertising or otherwise to promote the sale,\nuse or other dealings in this Software without prior written authorization.\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\nTHE SOFTWARE.\n',
+111 silly resolved     readmeFilename: 'README.md',
+111 silly resolved     _id: 'scss@0.2.4',
+111 silly resolved     dist: { shasum: '3b9a498699c5dcb9b5883e6a09732a819612210b' },
+111 silly resolved     _from: 'scss@',
+111 silly resolved     _resolved: 'https://registry.npmjs.org/scss/-/scss-0.2.4.tgz' } ]
+112 info install scss@0.2.4 into /usr/local/lib
+113 info installOne scss@0.2.4
+114 info /usr/local/lib/node_modules/scss unbuild
+115 verbose tar unpack /Users/nicktodd/.npm/scss/0.2.4/package.tgz
+116 silly lockFile e931949b--usr-local-lib-node-modules-scss tar:///usr/local/lib/node_modules/scss
+117 verbose lock tar:///usr/local/lib/node_modules/scss /Users/nicktodd/.npm/e931949b--usr-local-lib-node-modules-scss.lock
+118 silly lockFile ae62d436-ktodd-npm-scss-0-2-4-package-tgz tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz
+119 verbose lock tar:///Users/nicktodd/.npm/scss/0.2.4/package.tgz /Users/nicktodd/.npm/ae62d436-ktodd-npm-scss-0-2-4-package-tgz.lock
+120 silly gunzTarPerm modes [ '755', '644' ]
+121 error Error: EACCES, mkdir '/usr/local/lib/node_modules/scss'
+121 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/scss']
+121 error   errno: 3,
+121 error   code: 'EACCES',
+121 error   path: '/usr/local/lib/node_modules/scss',
+121 error   fstream_type: 'Directory',
+121 error   fstream_path: '/usr/local/lib/node_modules/scss',
+121 error   fstream_class: 'DirWriter',
+121 error   fstream_stack:
+121 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+121 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+121 error      'Object.oncomplete (fs.js:107:15)' ] }
+122 error Please try running this command again as root/Administrator.
+123 error System Darwin 15.0.0
+124 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "scss" "-g"
+125 error cwd /Users/nicktodd/Dropbox/Conygre/CSSDemos
+126 error node -v v0.10.22
+127 error npm -v 1.3.14
+128 error path /usr/local/lib/node_modules/scss
+129 error fstream_path /usr/local/lib/node_modules/scss
+130 error fstream_type Directory
+131 error fstream_class DirWriter
+132 error code EACCES
+133 error errno 3
+134 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/scss'
+135 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+135 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+135 error fstream_stack Object.oncomplete (fs.js:107:15)
+136 verbose exit [ 3, true ]

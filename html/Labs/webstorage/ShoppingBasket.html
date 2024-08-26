@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+<title>Shopping basket (using session storage)</title>
+
+<script>
+
+function addItem() {
+    // TODO
+}
+
+function countItems() {
+    // TODO
+}
+
+function removeItem() {
+    // TODO
+}
+
+function clearItems() {
+    // TODO
+}
+
+function displayItems() {
+    // TODO
+}
+
+function onLoad() {
+   document.getElementById("addButton").addEventListener("click", addItem, true);
+   document.getElementById("countItemsButton").addEventListener("click", countItems, true);
+   document.getElementById("removeItemButton").addEventListener("click", removeItem, true);
+   document.getElementById("clearItemsButton").addEventListener("click", clearItems, true);
+   document.getElementById("displayItemsButton").addEventListener("click", displayItems, true);
+}
+
+window.addEventListener("load", onLoad, true);
+
+</script>
+</head>
+<body>
+
+<h1>Shopping basket (using session storage)</h2>
+
+Product:  <input type="Text" id="product"  size="15"> <br>
+Quantity: <input type="Text" id="quantity" size="15"> <br>
+<br/><br/>
+
+<input type="button" value="Add item" id="addButton" /> &nbsp;
+<input type="button" value="Count items" id="countItemsButton" /> &nbsp;
+<input type="button" value="Remove item" id="removeItemButton" /> &nbsp;
+<input type="button" value="Clear items" id="clearItemsButton" /> &nbsp;
+<input type="button" value="Display items" id="displayItemsButton" /> &nbsp;
+
+<br/><br/>
+<div id="messageArea" />
+
+</body>
+</html>

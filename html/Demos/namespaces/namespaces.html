@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        // define a top level namespace
+        var meals = {};
+
+        // now define a nested namespace
+        meals.menu = {
+
+            menuContents: "Lots of great Thai food",
+
+        getMenu : function () {
+            alert("getting the menu");
+        },
+
+        showMenu : function () {
+            alert("show menu");
+        }
+
+
+        };
+
+        // some other namespace
+        meals.order = {};
+
+        alert(meals.menu.menuContents);
+
+        meals.menu.showMenu();
+
+    </script>
+
+    <meta charset="UTF-8">
+    <title>JavaScript Namespaces</title>
+</head>
+<body>
+
+</body>
+</html>

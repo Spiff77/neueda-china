@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Graph Plotter</title>
+    <link rel='stylesheet' type='text/css' href='Styles.css'/>
+</head>
+
+<body>
+
+    <canvas id='graphCanvas' width='600' height='600'>
+        Canvas not supported
+    </canvas>
+
+    <canvas id='legendCanvas' width='300' height='600'>
+        Canvas not supported
+    </canvas>
+
+    <form onsubmit="return false">
+        <fieldset>
+            <legend>Add Graph</legend>
+
+            <label>x squared</label>
+            <input type="text" id="a" />
+
+            <label>x</label>
+            <input type="text" id="b" />
+
+            <label>units</label>
+            <input type="text" id="c" />
+
+            <button id="addButton">Add</button>
+        </fieldset>
+    </form>
+
+	<script src='GraphPlotter.js' type="text/javascript"></script>
+
+</body>
+</html>

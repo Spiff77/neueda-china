@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Product Manager</title>
+    <link href="Styles/Stylesheet.css" rel="stylesheet" />
+    <script src="Scripts/ProductSuggestionsFunctions.js" type="text/javascript"></script>
+</head>
+<body id="main">
+
+    <h1>Product suggestions</h1>
+
+    <h3>Enter a product suggestion</h3>
+    <form action="">
+
+        <p>
+            <label for="description">Product description: </label>
+            <input id="description" name="description" type="text" />
+        </p>
+
+        <p>
+            <label for="email">Your e-mail address: </label>
+            <input id="email" name="email" type="text" />
+        </p>
+
+        <p>
+            <label for="price">Recommended retail price: </label>
+            <input id="price" name="price" type="text" />
+        </p>
+
+        <p>
+            <label for="sales">Estimated sales/year: </label>
+            <input id="sales" name="sales" type="text" />
+        </p>
+
+        <p>
+            <input type="submit" value="Add" onclick="return doAdd()" />
+        </p>
+    </form>
+
+    <fieldset id="allProductSuggestions">
+        <legend>All product suggestions</legend>
+        <input type="button" value="Sort" onclick="return doSort()" /> &nbsp;
+        <input type="button" value="Reverse" onclick="return doReverse()" /> &nbsp;&nbsp;&nbsp;
+        <span id="allProductsList"></span>
+    </fieldset>
+
+    <fieldset id="matchingProductSuggestions">
+        <legend>Matching product suggestions</legend>
+        <input id="searchString" name="searchString" type="text" /> &nbsp;
+        <input type="button" value="Search" onclick="return doSearch()" /> <br />
+        <div id="matchingProductsList"></div>
+    </fieldset>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+p 
+{
+	font-family: Tahoma; 
+	color: white; 
+	background-color: black; 
+	font-size: 70pt;
+	margin-bottom: 10pt;
+}
+
+.loud 
+{
+	font-family: arial;
+	font-weight: bold; 
+	color: orange; 
+	font-size: 30pt
+}
+
+.subtle
+{
+	font-family: arial; 
+	color: gray; 
+	font-size: 10pt
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<title>Modernizr Script Example</title>
+
+	<style type="text/css">
+	
+		body {
+			font-family: arial;
+		}
+		
+		div {
+			font-size: 30pt;
+		}
+		
+	</style>
+
+	<script src="modernizr.js" type="text/javascript"></script>
+	
+	<script type="text/javascript">
+
+		function onLoad() {
+
+			var messageAreaElem = document.getElementById("messageArea");
+			
+			if (Modernizr.websockets) {
+				messageAreaElem.innerHTML = "Your browser does support Web Sockets";
+				messageAreaElem.style["color"] = "lightgreen";
+			}
+			else {
+				messageAreaElem.innerHTML = "Your browser does not support Web Sockets";
+				messageAreaElem.style["color"] = "red";
+			}
+		}
+		
+		window.addEventListener("load", onLoad, true);
+		
+	</script>
+	
+</head>
+<body>
+
+	<h1>Modernizr Script Example</h1>
+	
+	<div id="messageArea"></div>
+
+</body>
+</html>

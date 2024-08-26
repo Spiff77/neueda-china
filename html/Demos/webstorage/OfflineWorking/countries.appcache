@@ -1,0 +1,18 @@
+CACHE MANIFEST
+
+# URIs for the device to download and cache for offline use (can include externally-hosted files)
+CACHE:
+Default.png
+Fallback.png
+Brazil.png
+China.png
+Greece.png
+Norway.png
+
+# Fallback rules (what to do if user selects a non-cached file)
+FALLBACK:
+/ Fallback.png
+
+# Network files (only available when online)
+NETWORK:
+*

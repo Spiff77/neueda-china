@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Going further with shapes</title>
+	<style>
+
+		body {
+			font-family: arial, verdana;
+			font-size: 12px;
+		}
+
+		button {
+			background-color: yellow;
+			color: orange;
+			width: 130px;
+			height: 30px;
+			margin: 0px 10px 5px 0px;
+		}
+
+		svg {
+			display: none;
+			border: 2px solid darkblue;
+			width: 580px;
+			height: 480px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Going further with shapes</h1>
+
+	<p>Click a button to draw a shape</p>
+
+	<button onclick="draw('circles')">Draw circles</button>
+	<button onclick="draw('ellipses')">Draw ellipses</button>
+	<button onclick="draw('arcs')">Draw arcs</button>
+	<button onclick="draw('quadratics')">Quadratic curves</button>
+	<button onclick="draw('cubics')">Cubic curves</button>
+	<br/>
+
+	<!-- Draw some circles -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="circles" >
+		<circle cx="120" cy="80" r="40"
+				stroke="blue" fill="red" />
+
+		<circle cx="160" cy="120" r="60"
+				stroke="blue" fill="yellow" />	
+	</svg>
+
+	<!-- Draw some ellipses -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="ellipses">
+		<ellipse cx="150" cy="60" rx="110" ry="30"
+				 stroke="blue" fill="red" />
+
+		<ellipse cx="150" cy="140" rx="110" ry="30"
+				 stroke="blue" fill="yellow" />	
+	</svg>
+
+	<!-- Draw some arcs -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="arcs">
+		
+		<!-- Use "A radiusX radiusY xAxisRotation largeArcFlag clockwiseFlag endX endY" -->
+		<path fill="red"
+		      d="M 100 180
+                 A 45 45, 0, 0, 0, 145 225
+                 L 145 180 Z" />
+  
+		<!-- Use "A radiusX radiusY xAxisRotation largeArcFlag clockwiseFlag endX endY" -->
+		<path fill="green"
+		      d="M 200 180
+                 A 45 45, 0, 1, 0, 245 225
+                 L 245 180 Z" />
+  
+		<!-- Use "A radiusX radiusY xAxisRotation largeArcFlag clockwiseFlag endX endY" -->
+		<path fill="blue"
+		      d="M 300 180
+                 A 45 45, 0, 0, 1, 345 225
+                 L 345 180 Z" />
+  
+		<!-- Use "A radiusX radiusY xAxisRotation largeArcFlag clockwiseFlag endX endY" -->
+		<path fill="orange" 
+		      d="M 400 180
+                 A 45 45, 0, 1, 1, 445 225
+                 L 445 180 Z" />
+		   				 
+	</svg>
+
+	<!-- Draw some quadratic curves (1 control point) -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="quadratics">
+
+		<!-- Use "Q controlPointX controlPointY endX endY" -->
+		<path stroke="red" fill="none"
+		      d="M 20 40 
+		         Q 50 0, 120 140" />
+
+		<!-- Can append other quadratic curves using "T endX endY" -->
+		<path stroke="green" fill="none"
+		      d="M 20 50 
+		         Q 50 10, 120 150 
+				 T 220 250" />
+
+		<!-- Can append any number of quadratic curves using "T endX endY" -->
+		<path stroke="blue" fill="none"
+		      d="M 20 60 
+		         Q 50 20, 120 160 
+				 T 220 260 
+				 T 150 150" />
+
+	</svg>
+	
+	<!-- Draw some cubic curves (2 control points) -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="cubics">
+	
+		<!-- Use "C controlPoint1X controlPoint1Y controlPoint2X controlPoint2Y endX endY" -->
+		<path stroke="red" fill="none"
+		      d="M 70 100 
+			     C 170 0, 170 600, 370 400" />
+
+		<!-- Can append other cubic curves using "S controlPoint2X controlPoint2Y endX endY" -->
+		<path stroke="green" fill="none"
+		      d="M 70 110 
+			     C 170 10, 170 610, 370 410 
+				 S 250 300, 450 150" />
+		  
+	</svg>
+
+
+	<script>
+		function draw(id) {
+
+			// Hide all the svg elements.
+			var elems = document.querySelectorAll("svg");
+			for (var i = 0; i < elems.length; i++) {
+				elems[i].style.display = "none";
+			}
+			
+			// Show this svg element.
+			var thisElem = document.querySelector("#" + id);
+			thisElem.style.display = "block";
+		}
+	</script>
+
+</body>
+</html>

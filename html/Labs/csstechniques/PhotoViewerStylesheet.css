@@ -1,0 +1,45 @@
+body {
+	font-family: arial, verdana, sans-serif;
+	font-size: smaller;
+	color: white;
+}
+
+h3 {
+	background-color: white;
+	color: #06b0f6;
+}
+
+.thumbnailImage {
+	width: 50px;
+	height: 50px;
+	float: left;
+	margin-right: 2px;
+}
+
+.largeImage {
+	width: 520px;
+	height: 500px;
+}
+
+/* TODO 1: Define a box shadow for containerPanel and helpPanel */
+
+/* TODO 2: Define styles for position, size, and overflow */
+#containerPanel {
+	background-color: lightblue;
+}
+
+/* TODO 3: Define styles for position, location, and size */
+#thumbnailsPanel {
+	list-style-type: none;
+}
+
+/* TODO 4: Define styles for position, location, and size */ 
+#helpPanel {
+	background-color: #06b0f6;
+	border: thin solid darkblue;
+	display: none;
+}
+
+/* TODO 5: Define styles for elements inside helpPanel */ 
+
+

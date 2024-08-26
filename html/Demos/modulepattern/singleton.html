@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Singleton Pattern</title>
+
+    <script>
+        var Meals = {};
+        Meals.Restaurant = {};
+
+        Meals.Restaurant.RestaurantDescription = {
+            OpeningHours: function () {
+                this.Opening = null;
+                this.Closing = null;
+            },
+            RestaurantDetails: function () {
+                this.Id = null;
+                this.Name = null;
+                this.Description = null;
+                this.Address = null;
+                this.Postcode = null;
+                this.Cuisines = null;
+            },
+            toString: function() {
+                return this.RestaurantDetails.Name + " " + " is a " + this.RestaurantDetails.Cuisines + " restaurant."
+            }
+        };
+
+        // initialise the values
+        // values would normally come from a REST API call or perhaps from a Web form
+        Meals.Restaurant.RestaurantDescription.OpeningHours.Opening = "17:00";
+        Meals.Restaurant.RestaurantDescription.OpeningHours.Closing = "22:00";
+        Meals.Restaurant.RestaurantDescription.RestaurantDetails.Id = 1;
+        Meals.Restaurant.RestaurantDescription.RestaurantDetails.Name = "Thai Garden";
+        Meals.Restaurant.RestaurantDescription.RestaurantDetails.Description = "Fantastic Thai Food";
+        Meals.Restaurant.RestaurantDescription.RestaurantDetails.Address = "Bristol";
+        Meals.Restaurant.RestaurantDescription.RestaurantDetails.Postcode = "BS1";
+        Meals.Restaurant.RestaurantDescription.RestaurantDetails.Cuisines = "Thai";
+
+
+        alert(Meals.Restaurant.RestaurantDescription.toString());
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

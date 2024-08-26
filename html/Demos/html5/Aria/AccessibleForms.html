@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html >
+<html lang="en">
+<head>
+    <title>Accessible Forms Example</title>
+
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		form {
+			width: 600px;
+			background-color: lightblue;
+			border: 2px solid blue;
+			margin-bottom: 30px;
+			padding: 10px;
+		}
+		
+		label {
+			width: 130px;
+			float: left;
+		}
+		
+		input[required] {
+			background-color: rgb(255, 255, 0);
+		}
+		
+		button {
+			background-color: yellow;
+			color: orange;
+			font-weight: bold;
+			width: 70px;
+			height: 30px;
+			margin-left: 5px;
+		}
+		
+	</style>
+
+</head>
+<body>
+	<h1>Accessible forms example</h1>
+
+	<!-- Demonstrate the aria-describedby and aria-labelledby attribute -->
+	<form id="form1" action="">
+	
+		<label for="fromText">From aiport: </label>	
+		<input id="fromText" type="text" size="25" aria-describedby="fromDescriptor" />
+		<span  id="fromDescriptor">The airport you're travelling from</span> <br/>
+
+		<label for="toText">To airport: </label>	
+		<input id="toText" type="text" size="25" aria-describedby="toDescriptor" />
+		<span  id="toDescriptor">The airport you're travelling to</span> <br/>
+
+		<label id="rangeLabel" for="rangeText">Travel within</label>	
+		<input id="rangeText" type="text" size="2" aria-labelledby="rangeLabel rangeText rangeUnit" />
+		<span  id="rangeUnit">days</span> <br/>
+
+		<button>Submit</button> 
+
+	</form>
+
+	
+	<!-- Demonstrate the aria-required attribute -->
+	<form id="form2" action="">
+	
+		<label for="nameText">Name: </label>	
+		<input id="nameText" type="text" size="25" required aria-required="true" /> <br/>
+
+		<label for="emailText">E-mail: </label>	
+		<input id="emailText" type="text" size="25" required aria-required="true" /> <br/>
+
+		<label for="homeTelText">Home tel: </label>	
+		<input id="homeTelText" type="text" size="25" /> <br/>
+
+		<label for="workTelText">Work tel: </label>	
+		<input id="workTelText" type="text" size="25" /> <br/>
+
+		<button>Submit</button> 
+
+	</form>
+
+</body>
+</html>

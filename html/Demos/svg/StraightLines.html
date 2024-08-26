@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Drawing simple shapes</title>
+	<style>
+
+		body {
+			font-family: arial, verdana;
+			font-size: 12px;
+		}
+
+		button {
+			background-color: yellow;
+			color: orange;
+			width: 130px;
+			height: 30px;
+			margin: 0px 10px 5px 0px;
+		}
+
+		svg {
+			display: none;
+			border: 2px solid darkblue;
+			width: 300px;
+			height: 200px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Drawing simple shapes</h1>
+
+	<p>Click a button to draw a shape</p>
+
+	<button onclick="draw('rectangles')">Draw rectangles</button>
+	<button onclick="draw('polygon')">Draw polygon</button>
+	<button onclick="draw('polyline')">Draw polyline</button>
+	<button onclick="draw('path')">Draw path</button>
+	<br/>
+
+	<!-- Draw some rectangles -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="rectangles" >
+		<rect x="20" y="20" width="100" height="75" 
+		      fill="red" stroke="blue" />
+			  
+		<rect x="50" y="50" width="100" height="75" rx="20" ry="20"
+		      fill="yellow" stroke="blue" />
+	</svg>
+
+	<!-- Draw a polygon -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="polygon">
+		<polygon points="110 70, 150 40, 190 70, 190 160, 150 130, 110 160" 
+				 fill="yellow" stroke="blue" />
+	</svg>
+
+	<!-- Draw a polyline -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="polyline">
+		<polyline points="105 100, 120 100, 125 90, 135 110, 145 90, 155 110, 165 90, 175 110, 180 100, 195 100"
+				  fill="none" stroke="blue" />
+	</svg>
+	
+	<!-- Draw a path -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="path">
+		<path d="M 150 50 L 250 150 L 50 150 Z" 
+		      fill="red" stroke="blue" />
+	</svg>
+	
+	
+	<script>
+		function draw(id) {
+
+			// Hide all the svg elements.
+			var elems = document.querySelectorAll("svg");
+			for (var i = 0; i < elems.length; i++) {
+				elems[i].style.display = "none";
+			}
+			
+			// Show this svg element.
+			var thisElem = document.querySelector("#" + id);
+			thisElem.style.display = "block";
+		}
+	</script>
+
+</body>
+</html>

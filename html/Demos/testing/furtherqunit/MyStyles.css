@@ -1,0 +1,60 @@
+﻿body {
+    color: #333;
+    font-family: Verdana, Helvetica, Sans-Serif;
+    font-size: .75em;
+}
+
+p {
+    padding-bottom: 2px;
+}
+
+label {
+    padding-right: 5px;
+    width: 7em;
+    float: left;
+}
+
+input, select {
+    padding: 5px;
+}
+
+input[type="text"] {
+    border: 1px solid #cdcdcd;
+}
+
+table, #mouseCoords {
+    margin-top: 20px;	
+    width: 300px;
+    box-shadow: 5px 5px 2px #cccccc;
+    display: none;
+}
+
+table {
+    border: 1px solid darkblue;
+    margin-top: 20px;	
+    width: 300px;
+    box-shadow: 5px 5px 2px #cccccc;
+    display: none;
+}
+
+#mouseCoords {
+    color: yellow;
+    background-color: skyblue;
+    padding: 10px 0px 10px 0px;
+    font-size: 12pt;
+    font-family: lucida console, courier new, serif;
+}
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(even) {
+    background-color: coral;
+}
+
+td {
+    width: 150px;
+}
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Web Storage API Demo</title>
+
+    <script>
+
+        function addFixedValuesToStorage() {
+            window.localStorage.setItem("timestamp", "2014");
+            window.localStorage.author = "Andy";
+        }
+
+        function storeItem() {
+            var itemName = document.getElementById("itemName").value;
+            var itemValue = document.getElementById("itemValue").value;
+    
+            window.localStorage.setItem(itemName, itemValue);
+            // window.localStorage[itemName] = itemValue;
+    
+            alert("Stored in local storage: key=" + itemName + " value=" + itemValue);
+        }
+
+        function countItems() {
+            var count = window.localStorage.length;
+            alert("There are " + count + " items in local storage");
+        }
+
+        function removeItem() {
+            var itemName = document.getElementById("itemName").value;
+            window.localStorage.removeItem(itemName);
+            alert("Done");
+        }
+
+        function clearItems() {
+            window.localStorage.clear();
+            alert("Done");
+        }
+
+        function displayItems() {
+
+            var count = window.localStorage.length;
+            var result = "Local storage values:<br/><ul>";
+    
+            for (var i = 0; i < count; i++) {
+                var key = window.localStorage.key(i);
+                var val = window.localStorage.getItem(key);
+                result += "<li>" + key + "=" + val + "</li>";
+            }
+            result += "</ul>";
+            document.getElementById("messageArea").innerHTML = result;
+        }
+
+        function onLoad() {
+           document.getElementById("storeItemButton").addEventListener("click", storeItem, true);
+           document.getElementById("countItemsButton").addEventListener("click", countItems, true);
+           document.getElementById("removeItemButton").addEventListener("click", removeItem, true);
+           document.getElementById("clearItemsButton").addEventListener("click", clearItems, true);
+           document.getElementById("displayItemsButton").addEventListener("click", displayItems, true);
+   
+           addFixedValuesToStorage();
+        }
+
+        window.addEventListener("load", onLoad, true);
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Web Storage API Demo</h1>
+    <p>Click the button to add an item to local storage</p>
+
+    Item name:  <input type="Text" id="itemName"  size="15"> <br>
+    Item value: <input type="Text" id="itemValue" size="15"> <br>
+    <br/><br/>
+
+    <input type="button" value="Store item" id="storeItemButton" /> &nbsp;
+    <input type="button" value="Count items" id="countItemsButton" /> &nbsp;
+    <input type="button" value="Remove item" id="removeItemButton" /> &nbsp;
+    <input type="button" value="Clear items" id="clearItemsButton" /> &nbsp;
+    <input type="button" value="Display items" id="displayItemsButton" /> &nbsp;
+
+    <br/><br/>
+    <div id="messageArea" />
+
+</body>
+</html>

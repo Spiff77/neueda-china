@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function createPizza(base, topping) {
+            var pizza  = new Object();
+            pizza.base = base;
+            pizza.topping = topping;
+            return pizza;
+        }
+
+        var favouritePizza = createPizza("thin crust", "ham and pineaple");
+
+        alert ("My pizza is a " + favouritePizza.base + " " + favouritePizza.topping);
+
+
+    </script>
+    <meta charset="UTF-8">
+    <title>Factory Pattern Example</title>
+</head>
+<body>
+
+</body>
+</html>

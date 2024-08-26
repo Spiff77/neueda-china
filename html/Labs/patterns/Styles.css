@@ -1,0 +1,42 @@
+﻿body {
+    font-family: arial, verdana, sans-serif;
+    font-size: smaller;
+}
+
+canvas {
+    border: thin solid skyblue;
+    box-shadow: 5px 5px 5px gray; 
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form {
+    background-color: lightblue;
+    width: 300px;
+}
+
+form * {
+    margin-bottom: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    width: 60px;
+    float: left;
+    text-align: right;
+    padding-right: 10px;
+}
+
+input {
+    display: block;
+}
+
+button {
+    float: right;
+    margin-right: 0;
+}
+

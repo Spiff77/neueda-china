@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Audible Validation Example</title>
+
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		form {
+			width: 600px;
+			background-color: lightblue;
+			border: 2px solid blue;
+			margin-bottom: 30px;
+			padding: 10px;
+		}
+			
+		label {
+			width: 130px;
+			float: left;
+		}
+		
+		input[required] {
+			background-color: rgb(255, 255, 0);
+		}
+
+		button {
+			background-color: yellow;
+			color: orange;
+			font-weight: bold;
+			width: 70px;
+			height: 30px;
+			margin-left: 5px;
+		}		
+		
+	</style>
+		
+	<script>
+
+		function audiblyValidateField(e) {
+		
+			// Remove any previous alert message.
+			var alertElem = document.getElementById("alert");
+			if (alertElem) {
+				document.body.removeChild(alertElem);
+			}
+				
+			// Get the data-format attribute on the element, to see what format the user should have entered.
+			var format = this.dataset.format;
+			
+			// Perform a Regular Expression test to see if the format is invalid.
+			if (format && !this.value.match(format)) {
+			
+				// The user input didn't match the required format, so create a <div> displaying a suitable error message.
+				var errorMessage = this.dataset.errorMessage;
+				
+				alertElem = document.createElement("div");
+				alertElem.setAttribute("id", "alert");
+				alertElem.setAttribute("role", "alert");
+				alertElem.innerHTML = errorMessage;
+				
+				document.body.appendChild(alertElem);
+			}
+		}
+		
+		function onLoad() {
+		
+			// Get all the fields that have the attribute aria-required="true".
+			var requiredElems = document.querySelectorAll("*[aria-required=true]");
+			
+			// For each of those fields, handle the blur event.
+			for (var i = 0; i < requiredElems.length; i++) {
+				var elem = requiredElems[i];
+				elem.onblur = audiblyValidateField;
+			}	
+		}
+		
+		window.addEventListener("load", onLoad, true);
+		
+    </script>
+</head>
+<body>
+	<h1>Audible validation example</h1>
+	
+	<!-- Demonstrate audible error messages -->
+	<form action="">
+	
+		<label for="nameText">Name: </label>	
+		<input id="nameText" type="text" size="25" 
+		       required 
+			   aria-required="true"
+			   data-format="[A-Za-z]+\s[A-Za-z]+"
+			   data-error-message="You must enter your first name and last name" /> <br/>
+
+		<label for="emailText">E-mail: </label>	
+		<input id="emailText" type="text" size="25" 
+		       required 
+			   aria-required="true" 
+			   data-format="\w+@[\w.]+([.][A-Za-z]{2,})$"
+			   data-error-message="You must enter a valid e-mail address" /> <br/>
+
+		<label for="homeTelText">Home tel: </label>	
+		<input id="homeTelText" type="text" size="25" /> <br/>
+
+		<label for="workTelText">Work tel: </label>	
+		<input id="workTelText" type="text" size="25" /> <br/>
+
+		<button>Submit</button> 
+
+	</form>
+	
+</body>
+</html>

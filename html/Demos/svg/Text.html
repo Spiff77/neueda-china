@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>Working with text</title>
+	<style>
+
+		body {
+			font-family: arial, verdana;
+			font-size: 12px;
+		}
+
+		button {
+			background-color: yellow;
+			color: orange;
+			width: 130px;
+			height: 30px;
+			margin: 0px 10px 5px 0px;
+		}
+
+		svg {
+			display: none;
+			border: 2px solid darkblue;
+			width: 900px;
+			height: 480px;
+		}
+
+	</style>
+
+</head>
+
+<body>
+
+	<h1>Working with text</h1>
+
+	<p>Click a button to draw stylized text</p>
+  
+	<button onclick="draw('styledText')">Styled text</button>
+	<button onclick="draw('decoratedText')">Decorated text</button>
+	<button onclick="draw('gradientPatternText')">Gradients/patterns</button>
+	<button onclick="draw('textPath')">Text on a path</button>
+	<button onclick="draw('textSpans')">Text spans</button>
+	<br/>
+
+	<!-- Draw stylized text -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="styledText" >
+		<text x="20" y="50" 
+		      fill="yellow" stroke="purple" stroke-width="2" 
+			  font-size="36" font-family="verdana" font-weight="bold">
+			Styled text
+		</text>
+	</svg>
+
+	<!-- Draw decorated text -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="decoratedText">
+		<g font-size="36" fill="yellow" stroke="purple" stroke-width="2" font-family="verdana" font-weight="bold">
+			<text x="20" y="50">Normal text</text>
+			<text x="20" y="150" text-decoration="line-through">Text with line through</text>
+			<text x="20" y="250" text-decoration="underline">Underlined text</text>
+			<text x="20" y="350" text-decoration="underline line-through">Underlined text with line through</text>
+		</g>	
+	</svg>
+
+	<!-- Draw gradient text -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="gradientPatternText">
+		<defs>
+			<linearGradient id="rainbowGradient" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+				<stop offset="0.0" stop-color="red" />
+				<stop offset="0.2" stop-color="orange" />
+				<stop offset="0.4" stop-color="yellow" />
+				<stop offset="0.6" stop-color="green" />
+				<stop offset="0.8" stop-color="blue" />
+				<stop offset="0.9" stop-color="indigo" />
+				<stop offset="1.0" stop-color="violet" />
+			</linearGradient> 
+			<pattern id="walesPattern" patternUnits="userSpaceOnUse" width="150" height="150"> 
+				<image xlink:href="wales.png" x="0" y="0" width="150" height="150" />
+			</pattern> 
+		</defs>
+		<text x="20" y="100" font-size="100" font-family="verdana" font-weight="bold"
+		      stroke="url(#rainbowGradient)" fill="url(#walesPattern)" stroke-width="6">Hello World!!!</text>
+	</svg>
+
+	<!-- Draw text on a path -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="textPath">
+		<path id="wavyPath1" d="M 50 250 C 150 150 250 50 350 150 C 450 250 550 350 650 250 C 750 150 850 150 850 150" fill="none" stroke="green" stroke-width="5"/>
+		<text font-size="46" fill="red" font-family="Verdana">
+			<textPath xlink:href="#wavyPath1">
+				Mae hen wlad fy nhadau yn annwyl i mi!
+			</textPath>
+		</text>
+	</svg>
+	
+	<!-- Draw some text spans -->
+	<svg xmlns="http://www.w3.org/2000/svg" id="textSpans">
+	
+		<defs>
+			<path id="wavyPath2" d="M 50 250 C 150 150 250 50 350 150 C 450 250 550 350 650 250 C 750 150 850 150 850 150" />
+		</defs>
+
+	<!--	<use xlink:href="#wavyPath2" fill="none" stroke="green" stroke-width="5" /> -->
+
+		<text font-size="46" fill="orange" font-family="Verdana" stroke="purple">
+			<textPath xlink:href="#wavyPath2">
+				<tspan>Cubic equation: 5x</tspan>
+				<tspan dy="-30" fill="green" font-size="33">3</tspan>
+				<tspan dy="+30"> + 4x</tspan>
+				<tspan dy="-30" fill="green" font-size="33">2</tspan>
+				<tspan dy="+30"> + 6x - 5 = 0</tspan>
+			</textPath>
+		</text>
+
+	</svg>
+
+
+	<script>
+		function draw(id) {
+
+			// Hide all the svg elements.
+			var elems = document.querySelectorAll("svg");
+			for (var i = 0; i < elems.length; i++) {
+				elems[i].style.display = "none";
+			}
+			
+			// Show this svg element.
+			var thisElem = document.querySelector("#" + id);
+			thisElem.style.display = "block";
+		}
+	</script>
+
+</body>
+</html>

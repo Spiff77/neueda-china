@@ -1,0 +1,23 @@
+p 
+{
+	font-family: lucida calligraphy, times new roman;
+	color: red; 
+	background-color: green; 
+	font-size: 48pt;
+	margin-bottom: 10pt;
+}
+
+.loud 
+{
+	font-family: arial;
+	font-weight: bold; 
+	color: orange; 
+	font-size: 30pt
+}
+
+.subtle
+{
+	font-family: arial; 
+	color: gray; 
+	font-size: 10pt
+}

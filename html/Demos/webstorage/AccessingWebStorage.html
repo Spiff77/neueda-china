@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Accessing Web Storage</title>
+
+    <script type="text/javascript">
+
+        function onLoad() {
+
+            // Demonstrate how to access local storage.
+            if (window.localStorage) {
+                accessStorage(window.localStorage, "localStorageCountSpan");
+            }
+    
+            // Demonstrate how to access session storage.
+            if (window.sessionStorage) {
+                accessStorage(window.sessionStorage, "sessionStorageCountSpan");
+            }
+        }
+
+        function accessStorage(storageObject, spanName) {
+
+            var spanElement = document.getElementById(spanName);
+
+            // Access an item in web storage (any of the following APIs are OK).
+            var i = storageObject.count;    
+            // var i = storageObject.getItem("count");    
+            // var i = storageObject["count"];    
+    
+    
+            // If the item isn't present, you'll get back undefined.
+            if (i === undefined) {
+                i = 0;
+            }
+            i++;
+    
+            // Display the value on the web page.
+            spanElement.innerHTML = i;
+
+            // Store an item in web storage (any of the following APIs are OK).
+            storageObject.count = i;
+            // storageObject.setItem("count", i);
+            // storageObject["count"] = i;
+        }
+
+        window.addEventListener("load", onLoad, true);
+
+    </script>
+
+</head>
+<body>
+    <h1>Accessing Web Storage</h1>
+    <div>Local storage count: <span id="localStorageCountSpan" /></div>
+    <div>Session storage count: <span id="sessionStorageCountSpan" /></div>
+</body>
+</html>

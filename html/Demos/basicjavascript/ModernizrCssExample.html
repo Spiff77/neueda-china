@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modernizr CSS Example</title>
+
+	<style type="text/css">
+	
+		body {
+			font-family: arial;
+		}
+		
+		div.ws, div.nows { 
+			display: none; 
+			font-size: 30pt;
+		}
+
+		.websockets div.ws { 
+			display: block;
+			color: lightgreen;
+		}
+		
+		.no-websockets div.nows { 
+			display: block;
+			color: red;
+		}
+
+	</style>
+
+	<script src="modernizr.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+	<h1>Modernizr CSS Example</h1>
+
+	<div class="nows">
+		Your browser does not support WebSockets.
+	</div>
+	
+	<div class="ws">
+		Your browser does support WebSockets.
+	</div>	
+
+</body>
+</html>

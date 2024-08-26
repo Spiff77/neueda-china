@@ -1,0 +1,68 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View Events</title>
+
+    <style>
+        li {
+	        margin-bottom: 20px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        // Handle all web storage events.
+        window.onstorage = handleStorage;
+            
+        // Event-handler function for web storage events. The event parameter has these properties:
+        //    storageArea - window.localStorage or window.sessionStorage
+        //    url         - web page that caused the web storage event
+        //    key         - key of the item that has changed
+        //    oldValue    - old value of item in web storage, before event
+        //    newValue    - new value of item in web storage, after event
+        function handleStorage(e) {
+
+            var message = "";
+
+            // Was the event triggered on local storage or session storage?
+            if (e.storageArea == window.localStorage) {
+                message += "local storage changed by " + e.url + "<br/>";
+            }
+            else {
+                message += "session storage changed by " + e.url + "<br/>";
+            }
+
+            // What kind of change has occurred?
+            if (e.oldValue == null && e.newValue == null) {
+                message += "Cleared all items";
+            }
+            else if (e.oldValue == null) {
+                message += "Added [" + e.key + "], value " + e.newValue;
+            }
+            else if (e.newValue == null) {
+                message += "Removed [" + e.key + "], old value " + e.oldValue;
+            }
+            else {
+                message += "Changed [" + e.key + "], old value " + e.oldValue + ", new value " + e.newValue;
+            }
+
+            // Create and display a new li, to display info about this event.
+            var li = document.createElement("li");
+            li.innerHTML = message;
+            var ul = document.getElementById("eventList");
+            ul.appendChild(li);
+        }
+
+    </script>
+
+</head>
+<body>
+    <ul id="eventList" />
+</body>
+</html>

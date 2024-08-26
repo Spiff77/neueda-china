@@ -1,0 +1,32 @@
+﻿video {
+    width: 450px;
+    height: 340px;
+    border: 5px solid orange;
+    box-shadow: 5px 5px 5px gray; 
+
+	-ms-transition:     -ms-border-radius     1s ease-out;
+	-webkit-transition: -webkit-border-radius 1s ease-out;
+	-moz-transition:    -moz-border-radius    1s ease-out;
+	-o-transition:      -o-border-radius      1s ease-out;
+	transition:         border-radius         1s ease-out;
+}
+
+video:hover {
+	-ms-border-radius:     175px 20px 175px 20px;
+	-webkit-border-radius: 175px 20px 175px 20px;
+	-moz-border-radius:    175px 20px 175px 20px;
+	-o-border-radius:      175px 20px 175px 20px;
+	border-radius:         175px 20px 175px 20px;
+}
+
+canvas {
+    width: 450px;
+    height: 340px;
+    display: none;
+
+	-ms-border-radius:     20px 175px 20px 175px;
+	-webkit-border-radius: 20px 175px 20px 175px;
+	-moz-border-radius:    20px 175px 20px 175px;
+	-o-border-radius:      20px 175px 20px 175px;
+	border-radius:         20px 175px 20px 175px;
+}

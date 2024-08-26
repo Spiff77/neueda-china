@@ -1,0 +1,76 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Local Storage Events Demo</title>
+
+    <script type="text/javascript">
+
+        function storeItem() {
+            var itemName = document.getElementById("itemName").value;
+	        var itemValue = document.getElementById("itemValue").value;
+
+	        window.localStorage.setItem(itemName, itemValue);
+	        displayItems();
+        }
+
+        function removeItem() {
+            var itemName = document.getElementById("itemName").value;
+
+	        window.localStorage.removeItem(itemName);
+	        displayItems();
+        }
+
+        function clearItems() {
+	        window.localStorage.clear();
+	        displayItems();
+        }
+
+        function displayItems() {
+
+	        var count = window.localStorage.length;
+	        var result = "Local storage values:<br/><ul>";
+	
+	        for (var i = 0; i < count; i++) {
+		        var key = window.localStorage.key(i);
+		        var val = window.localStorage.getItem(key);
+		        result += "<li>" + key + "=" + val + "</li>";
+	        }
+	        result += "</ul>";
+	        document.getElementById("messageArea").innerHTML = result;
+        }
+
+        function onLoad() {
+           document.getElementById("storeItemButton").addEventListener("click", storeItem, true);
+           document.getElementById("removeItemButton").addEventListener("click", removeItem, true);
+           document.getElementById("clearItemsButton").addEventListener("click", clearItems, true);
+        }
+
+        window.addEventListener("load", onLoad, true);
+
+    </script>
+
+</head>
+<body>
+
+    <h1>Local Storage Events Demo</h1>
+
+    Item name:  <input type="Text" id="itemName"  size="15"> <br>
+    Item value: <input type="Text" id="itemValue" size="15"> <br>
+    <br/>
+
+    <input type="button" value="Store item" id="storeItemButton" /> &nbsp;
+    <input type="button" value="Remove item" id="removeItemButton" /> &nbsp;
+    <input type="button" value="Clear items" id="clearItemsButton" /> &nbsp;
+
+    @Html.ActionLink("View Events", "ViewEvents", "Home", new { target = "_blank" })
+    <br/><br/>
+    <div id="messageArea" />
+
+</body>
+</html>

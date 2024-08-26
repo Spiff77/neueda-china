@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Example</title>
+    <link href="responsive.css" type="text/css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#nav-mobile").html($("#nav-main").html());
+            $("#nav-trigger span").click(function(){
+                if ($("nav#nav-mobile ul").hasClass("expanded")) {
+                    $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+                    $(this).removeClass("open");
+                } else {
+                    $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+                    $(this).addClass("open");
+                }
+            });
+        });
+
+    </script>
+
+
+</head>
+<body>
+<nav id="nav-main">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Gallery</a></li>
+        <li><a href="">Tutorials</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+</nav>
+<div id="nav-trigger">
+    <span>Menu</span>
+</div>
+<nav id="nav-mobile"></nav>
+</body>
+</html>

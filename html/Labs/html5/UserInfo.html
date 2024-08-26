@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>User Info</title>
+    <style>
+    
+        body {
+            font-family: Arial, Verdana;
+        }
+        
+        button {
+            width: 120px;
+            height: 30px;
+            background-color: green;
+            color: lightblue;
+            margin: 10px 5px 10px 5px;
+        }
+        
+        label {
+            float: left;
+            width: 100px;
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+    <div>
+        <p>User info</p>
+        
+        <label>Firstname</label>
+        <input type="text" id="fname" /><br/>
+        
+        <label>Lastname</label>
+        <input type="text" id="lname" required="required" /><br/>
+        
+        <label>Title</label>
+        <input type="text" id="title" /><br/>
+    </div>   
+    
+    <div>
+        <p>Address info</p>
+
+        <label>Address 1</label>
+        <input type="text" id="address1" required="required" /><br/>
+        
+        <label>Address 2</label>
+        <input type="text" id="address2" /><br/>
+        
+        <label>Address 3</label>
+        <input type="text" id="address3" required="required" /><br/>
+    </div>
+    
+    <div>
+        <p>Telephone info</p>
+        
+        <div id="phoneNumbers">
+            <label>Mobile</label>
+            <input type="text" id="mobile" required="required" /><br/>
+            
+            <label>Home</label>
+            <input type="text" id="home" /><br/>
+            
+            <label>Office</label>
+            <input type="text" name="office" /><br/>
+            
+            <button type="button" id="addPhoneNumbersButton">Add</button>
+        </div>
+
+        <div>
+            Phone numbers:
+            <ul id="phoneList" />
+        </div>
+
+    </div>
+    
+    <button type="button" id="displayAllRequiredFieldsButton">Display Required</button>
+    <button type="button" id="clearAllFieldsButton">Clear All</button>
+     
+    <script type="text/javascript">
+     
+        document.querySelector("#displayAllRequiredFieldsButton").onclick = function() {
+            // Todo: Implement function to display all required fields.
+        }
+    
+        document.querySelector("#clearAllFieldsButton").onclick = function() {
+            // Todo: Implement function to clear all fields.
+        }
+        
+        document.querySelector("#addPhoneNumbersButton").onclick = function() {
+            // Todo: Implement function to add phone numbers to the list.
+		}
+    </script>
+
+</body>
+</html>

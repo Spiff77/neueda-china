@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html >
+<html>
+<head>
+    <title>Aria Live Regions Example</title>
+
+	<style>
+		body { 
+			font-family: verdana; 
+		}
+		
+		div {
+			padding: 5px;
+			margin: 10px 0px 10px 0px;
+			background-color: lightblue;
+		}
+		
+		button {
+			background-color: yellow;
+			color: orange;
+			font-weight: bold;
+			width: 70px;
+			height: 30px;
+			margin-left: 5px;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+		
+	</style>
+
+	<script>
+	
+		var count = 0;
+		var theInterval;
+		
+		function doStart() {
+			theInterval = setInterval(addItem, 1000);
+		}
+		
+		function doStop() {
+			clearInterval(theInterval);
+		}
+		
+		function addItem() {
+			count++;			
+			var now = new Date();
+			
+			var item = document.createElement("li");
+			item.innerHTML = "Counter " + count + " added at " + twoDigits(now.getHours()) + ":" +  twoDigits(now.getMinutes()) + ":" +  twoDigits(now.getSeconds());
+			
+			var myListElem = document.getElementById("myList");
+			myListElem.appendChild(item);
+		}
+		
+		function twoDigits(num) {
+			return (num < 10) ? "0" + num : num;
+		}
+		
+	</script>
+	
+</head>
+<body>
+	<h1>Aria live regions example</h1>
+
+	<div>
+		Hello world!
+	</div>
+	
+	<div>
+		Bonjour tout le monde!
+	</div>
+	
+	<div>
+		Hei verden!
+	</div>
+
+	<button onclick="doStart()">Start</button>
+	<button onclick="doStop()">Stop</button>
+	
+	<!-- 
+	     The myList element below is live - it will report changes for screen readers to detect.
+	     Values for aria-live attribute:
+		     aria-live="off"       - default value, indicates the region is not live.
+			 aria-live="polite"    - indicates screen reader shouldn't interrupt user's current operation.
+			 aria-live="assertive" - indicates screen reader can interrupt user's current operation.
+	     Additional attributes:
+		     aria-atomic           - can be "true" (tell user all the values) or "false" (just tell user the changes)
+			 aria-relevant         - can be "additions", "removals", "text", or "all" (influences what to tell the user)
+	-->
+	<ul id="myList" aria-live="polite">
+	</ul>
+
+</body>
+</html>
