@@ -25,3 +25,10 @@ Simple front-end/back-end app: https://github.com/Spiff77/music-app
 Feedbacks:
 Data:		: https://bit.ly/4cE79OI
 Egineering	: https://bit.ly/4fXvCBr
+
+
+
+Some hints:
+- chartjs - Simple chart library
+- d3js - more simple chart library
+
