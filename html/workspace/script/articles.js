@@ -39,7 +39,7 @@ const fetchData = async () => {
                 let button = document.createElement('button') // Create an orphan <button>
                 button.innerText = 'Save article' // Set the content of the button a text.
 
-                footer.append(button) // give <footer> the button (from: <footer> ===> to: <footer><button>Save article</button></footer>)
+                footer.append(button) // Give <footer> the button (from: <footer> ===> to: <footer><button>Save article</button></footer>)
                 h3Elem.append(article.title) //Give text to H3
                 headerElem.append(h3Elem) // Insert <h3> in <header>
                 articleElem.append(headerElem) // Insert <header> in <article>

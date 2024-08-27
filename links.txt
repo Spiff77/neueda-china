@@ -13,7 +13,7 @@ https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/8a4765a2-2c22-4f36
 On VM: https://hsbcchinaX.neueda.com:8443/ # With X as you VM number
 
 playlist: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=5b30cee3b4aa46dc&pt=15fc6af12e6eaed12ff224ca1e63e085
-
+https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=88c4622f8ee44692
 
 PROJECT:
 Project instruction from github: https://bitbucket.org/neuedamats/portfoliomanager/src/master/
