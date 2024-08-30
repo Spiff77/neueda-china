@@ -6,6 +6,7 @@ mastering VI: https://vim-adventures.com/
 TESTS:
 SQL: https://test.neueda.com/test/HSBCEngineeringSprint1LinuxSQL
 JAVASCRIPT: https://test.neueda.com/test/HSBCEngineeringGuangzhouJavaScript
+WEB: https://test.neueda.com/test/HSBCEngineeringSprint3Web
 
 Easy retro link
 https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/8a4765a2-2c22-4f36-b4b8-b457d6fbd056
@@ -13,7 +14,7 @@ https://easyretro.io/publicboard/NTDqkkm6utgJFD9cdBrdb4sI6n72/8a4765a2-2c22-4f36
 On VM: https://hsbcchinaX.neueda.com:8443/ # With X as you VM number
 
 playlist: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=5b30cee3b4aa46dc&pt=15fc6af12e6eaed12ff224ca1e63e085
-https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=88c4622f8ee44692
+link 2: https://open.spotify.com/playlist/4F2b19DsonEmfmSjsCCuTM?si=88c4622f8ee44692
 
 PROJECT:
 Project instruction from github: https://bitbucket.org/neuedamats/portfoliomanager/src/master/
